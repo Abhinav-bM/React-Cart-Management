@@ -1,0 +1,45 @@
+.cartMain{
+    padding: 0vw 2vw;
+}
+
+.cart-table-container {
+  overflow-x: auto;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.cart-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.cart-table td {
+  text-align: center;
+}
+
+.cart-table img {
+  max-width: 100px;
+  height: auto;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
