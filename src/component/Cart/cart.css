@@ -1,5 +1,5 @@
-.cartMain{
-    padding: 0vw 2vw;
+.cartMain {
+  padding: 0vw 2vw;
 }
 
 .cart-table-container {
@@ -35,11 +35,17 @@ button {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 8px 16px;
+  padding: 8px 10px;
   border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+.qty-area {
+  border: 2px solid #007bff;
+  margin: 0px 2px;
+  padding: 4px 16px;
+  border-radius: 4px;
 }

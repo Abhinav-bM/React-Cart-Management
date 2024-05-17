@@ -35,9 +35,35 @@ export const CartProvider = ({ children }) => {
     return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
 
+  const incrementQuantity = (productId) => {
+    setCartItems(
+      cartItems.map((item) =>
+        item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  };
+
+  const decrementQuantity = (productId) => {
+    setCartItems(
+      cartItems.map((item) =>
+        item.id === productId
+          ? { ...item, quantity: item.quantity > 1 ? item.quantity - 1 : 1 }
+          : item
+      )
+    );
+  };
+
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, clearCart, getTotalItems }}
+      value={{
+        cartItems,
+        addToCart,
+        removeFromCart,
+        clearCart,
+        getTotalItems,
+        incrementQuantity,
+        decrementQuantity,
+      }}
     >
       {children}
     </CartContext.Provider>

@@ -3,7 +3,7 @@ import { useCart } from "../../Context/CartContex";
 import "./cart.css";
 
 const Cart = () => {
-  const { cartItems, removeFromCart, clearCart } = useCart();
+  const { cartItems, removeFromCart, clearCart, incrementQuantity, decrementQuantity } = useCart();
 
   return (
     <div className="cartMain">
@@ -31,7 +31,15 @@ const Cart = () => {
                   </td>
                   <td>{item.name}</td>
                   <td>₹{item.price}</td>
-                  <td>{item.quantity}</td>
+                  <td>
+                    <button>
+                      <strong onClick={()=>decrementQuantity(item.id)}>-</strong>
+                    </button>
+                    <strong className="qty-area">{item.quantity}</strong>
+                    <button onClick={()=>incrementQuantity(item.id)}>
+                      <strong>+</strong>
+                    </button>
+                  </td>
                   <td>₹{item.price * item.quantity}</td>
                   <td>
                     <button onClick={() => removeFromCart(item.id)}>
